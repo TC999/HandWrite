@@ -18,7 +18,7 @@ jobs:
           pip install -r requirements.txt -U pyinstaller
           pyinstaller -F -w -i icon\icon.jpeg main.py
       - name: 移动文件
-        run:
+        run: |
           move outputs dist/outputs
           move ttf_library dist/ttf_library
       - name: 上传
@@ -40,7 +40,7 @@ jobs:
           pip install -r requirements.txt -U pyinstaller
           pyinstaller -F main.py
       - name: 移动文件
-        run:
+        run: |
           move outputs dist/outputs
           move ttf_library dist/ttf_library
       - name: 上传
