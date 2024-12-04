@@ -41,8 +41,8 @@ jobs:
           pyinstaller -F main.py
       - name: 移动文件
         run: |
-          move outputs dist/outputs
-          move ttf_library dist/ttf_library
+          mv outputs dist
+          mv ttf_library dist
       - name: 上传
         uses: actions/upload-artifact@v4
         with:
